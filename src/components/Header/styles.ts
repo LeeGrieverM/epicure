@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import hamburgerIcon from '../assets/icons/hambIcon.svg'
+import hamburgerIcon from '../../assets/icons/hambIcon.svg'
 
 export const Container = styled.header`
     color: #FFFFFF;
@@ -14,11 +14,21 @@ export const Container = styled.header`
     @media (max-width: 768px) {
         margin-left: 20px;
         margin-right: 20px;
+        margin-top: 10px;
     }
 `;
 
 export const LogoContainer = styled.img`
     /* border: 5px solid pink;  */
+    @media (max-width: 768px) {
+    }
+`;
+export const Icon = styled.img`
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     @media (max-width: 768px) {
     }
 `;

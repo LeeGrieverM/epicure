@@ -1,4 +1,4 @@
-import Header from "../../components/Header"
+import Header from "../../components/Header/Header"
 import homePagePic from '../../assets/images/homepagePic.png'
 import {
   Container,
@@ -9,7 +9,7 @@ function HomePage() {
   return (
     <Container>
     <Header/>
-    <ImgContainer src={homePagePic} alt='home-page-pic'/>
+    <ImgContainer src={homePagePic} alt='home-page-pic'></ImgContainer>
     </Container>
   )
 }
