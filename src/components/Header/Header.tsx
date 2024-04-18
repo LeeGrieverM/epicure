@@ -10,11 +10,17 @@ function Header() {
     <div className="container">
         <button className="hamburger-button"/>
         <img src={mainIcon} alt='main-logo' className="main-icon"/>
-        <div className="icons-container">
-            <img src={searchIcon} alt='shopping-bag' className="logo-container"/>
-            <img src={personIcon} alt='shopping-bag' className="logo-container"/>
-            <img src={shoppingBagIcon} alt='shopping-bag' className="logo-container"/>
-        </div>
+        <ul className='icons-container'>
+          <li>
+          <img src={searchIcon} alt='shopping-bag' className="logo-container"/>
+          </li>
+          <li>
+          <img src={personIcon} alt='shopping-bag' className="logo-container"/>
+          </li>
+          <li>
+          <img src={shoppingBagIcon} alt='shopping-bag' className="logo-container"/>
+          </li>
+        </ul>
     </div>
   )
 }
