@@ -1,16 +1,9 @@
-@import '../../data/variables.scss';
+@import "../../data/variables.scss";
 
 .home-page-container {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 100%;
+  height: 100%;
 }
-
-.img-container {
-    @media (max-width: map-get($breakPoints, m)) {
-        width: 550px;
-        height: 275px;
-        margin-left: -130px;
-    }
-}
-

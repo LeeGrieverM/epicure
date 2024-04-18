@@ -1,28 +1,33 @@
-import React from 'react'
-import mainIcon from '../../assets/icons/mainIcon.svg'
-import searchIcon from '../../assets/icons/searchIcon.svg'
-import personIcon from '../../assets/icons/personIcon.svg'
-import shoppingBagIcon from '../../assets/icons/shoppingBagIcon.svg'
-import './Header.scss'
+import React from "react";
+import mainIcon from "../../assets/icons/mainIcon.svg";
+import { textButtonsData, iconButtonsData } from "../../data/constants";
+import "./Header.scss";
+
+
 
 function Header() {
   return (
     <div className="container">
-        <button className="hamburger-button"/>
-        <img src={mainIcon} alt='main-logo' className="main-icon"/>
-        <ul className='icons-container'>
-          <li>
-          <img src={searchIcon} alt='shopping-bag' className="logo-container"/>
+      <button className="hamburger-button" />
+      <img src={mainIcon} alt="main-logo" className="main-icon" />
+      <ul className='titles-container'>
+        {textButtonsData.map(({ text, className }, index) => (
+          <li key={index}>
+            <button className={className}>
+              {text}
+            </button>
           </li>
-          <li>
-          <img src={personIcon} alt='shopping-bag' className="logo-container"/>
+        ))}
+      </ul>
+      <ul className="icons-container">
+      {iconButtonsData.map(({ icon, alt}) => (
+          <li key={alt}>
+            <button className={`logo-container`} style={{backgroundImage: `url(${icon})`}} />
           </li>
-          <li>
-          <img src={shoppingBagIcon} alt='shopping-bag' className="logo-container"/>
-          </li>
-        </ul>
+        ))}
+      </ul>
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;

@@ -1,14 +1,16 @@
-import Header from "../../components/Header/Header"
-import homePagePic from '../../assets/images/homepagePic.png'
-import './HomePage.scss'
+import Header from "../../components/Header/Header";
+import "./HomePage.scss";
+import SearchBar from "../../components/SearchBar/SearchBar";
+import IconMeanings from "../../components/IconMeanings/IconMeanings";
 
 function HomePage() {
   return (
     <div className="home-page-container">
-    <Header/>
-    <img src={homePagePic} alt='home-page-pic' className="img-container"/>
+      <Header />
+      <SearchBar />
+      <IconMeanings/>
     </div>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;

@@ -1,4 +1,8 @@
 
+import searchIcon from "../assets/icons/searchIcon.svg";
+import personIcon from "../assets/icons/personIcon.svg";
+import shoppingBagIcon from "../assets/icons/shoppingBagIcon.svg";
+
 export const paths = {
     root: "/",
     restaurants: "/restaurants",
@@ -7,13 +11,19 @@ export const paths = {
 
 export const text = {
     searchBarTitle: "Epicure works with the top chef restaurants in Tel Aviv",
-    searchBarInput: "Search for restaurant cuisine, chef",
+    searchBarPlaceHolder: "Search for restaurant, cuisine, chef",
 };
 
-// export const breakPoints = {
-//     xs: 300,
-//     s: 500,
-//     m: 768, 
-//     l: 1000,
-//     xl: 1440,
-// };
+
+
+export const iconButtonsData = [
+  { icon: searchIcon, alt: "search-icon", className: "search-button" },
+  { icon: personIcon, alt: "person-icon", className: "person-button" },
+  { icon: shoppingBagIcon, alt: "shopping-bag-icon", className: "shopping-bag-button" }
+];
+
+export const textButtonsData = [
+  { text: "EPICURE", className: "epicure-button" },
+  { text: "Restaurants", className: "text-button" },
+  { text: "Chefs", className: "text-button" }
+];
