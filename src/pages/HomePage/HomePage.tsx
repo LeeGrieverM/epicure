@@ -1,12 +1,12 @@
 import Header from "../../components/Header/Header"
-import homePagePic from '../../assets/images/homepagePic.png'
 import './HomePage.scss'
+import SearchBar from "../../components/SearchBar/SearchBar"
 
 function HomePage() {
   return (
     <div className="home-page-container">
     <Header/>
-    <img src={homePagePic} alt='home-page-pic' className="img-container"/>
+    <SearchBar/>
     </div>
   )
 }

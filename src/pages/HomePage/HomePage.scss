@@ -6,11 +6,5 @@
     row-gap: 10px;
 }
 
-.img-container {
-    @media (max-width: map-get($breakPoints, m)) {
-        width: 550px;
-        height: 275px;
-        margin-left: -130px;
-    }
-}
+
 

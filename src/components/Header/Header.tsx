@@ -12,13 +12,13 @@ function Header() {
         <img src={mainIcon} alt='main-logo' className="main-icon"/>
         <ul className='icons-container'>
           <li>
-          <img src={searchIcon} alt='shopping-bag' className="logo-container"/>
+          <img src={searchIcon} alt='search-icon' className="logo-container"/>
           </li>
           <li>
-          <img src={personIcon} alt='shopping-bag' className="logo-container"/>
+          <img src={personIcon} alt='person-icon' className="logo-container"/>
           </li>
           <li>
-          <img src={shoppingBagIcon} alt='shopping-bag' className="logo-container"/>
+          <img src={shoppingBagIcon} alt='shopping-bag-icon' className="logo-container"/>
           </li>
         </ul>
     </div>
