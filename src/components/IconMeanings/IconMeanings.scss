@@ -1,0 +1,53 @@
+@import "../../data/variables.scss";
+
+.meanings-container {
+    border: 2px solid pink;
+    background-color: map-get($colors, offWhite);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    font-family: $font;
+    padding-top: 0.5%;
+    // padding-bottom: 2%;
+    height: 20%;
+    @media (max-width: map-get($breakPoints, m)) {
+        height: 580px;
+    }
+}
+
+.meanings-title {
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 35px;
+    letter-spacing: 1.25px;
+    text-align: center;
+}
+
+
+.icon-meaning {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.icon-img {
+    width: 60px;
+    height: 60px;
+}
+
+.icons-list-container {
+    display: flex;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    letter-spacing: 2px;
+    align-items: center;
+    justify-content: center;
+    column-gap: 40px;
+    @media (max-width: map-get($breakPoints, m)) {
+        flex-direction: column;
+        height: 580px;
+    }
+}

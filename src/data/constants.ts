@@ -3,6 +3,10 @@ import searchIcon from "../assets/icons/searchIcon.svg";
 import personIcon from "../assets/icons/personIcon.svg";
 import shoppingBagIcon from "../assets/icons/shoppingBagIcon.svg";
 
+import spicyIcon from '../assets/icons/spicyIcon.svg';
+import vegetarianIcon from '../assets/icons/vegetarianIcon.svg';
+import veganIcon from '../assets/icons/veganIcon.svg';
+
 export const paths = {
     root: "/",
     restaurants: "/restaurants",
@@ -26,4 +30,10 @@ export const textButtonsData = [
   { text: "EPICURE", className: "epicure-button" },
   { text: "Restaurants", className: "text-button" },
   { text: "Chefs", className: "text-button" }
+];
+
+export const iconsMeaningData = [
+  { icon: spicyIcon, alt: "spicy", className: "Spicy" },
+  { icon: vegetarianIcon, alt: "vegetarian", className: "Vegetarian" },
+  { icon: veganIcon, alt: "vegan", className: "Vegan" }
 ];
