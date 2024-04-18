@@ -1,10 +1,7 @@
-@import '../../data/variables.scss';
+@import "../../data/variables.scss";
 
 .home-page-container {
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
 }
-
-
-

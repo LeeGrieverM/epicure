@@ -9,9 +9,9 @@ function SearchBar() {
     <div className='search-area-container'>
     <img src={homePagePic} alt='home-page-pic' className="img-container"/>
     <div className="search-bar-container">
-    <h2 className='search-title'>
+    <h1 className='search-title'>
       {text.searchBarTitle}
-    </h2>
+    </h1>
     <div className='search-input-container'>
     <img src={searchIcon} alt='search-icon' className='search-icon'/>
     <input type='text' placeholder={text.searchBarPlaceHolder} className='search-input'/>
