@@ -1,3 +1,5 @@
+@import '../../data/variables.scss';
+
 .search-bar-container {
     background: #FFFFFFE0;
     opacity: 0.88;
@@ -6,7 +8,7 @@
     display: flex;
     align-items: center;
 
-    @media (max-width: 768px) {
+    @media (max-width: map-get($breakPoints, m)) {
         width: 335px;
         height: 144px;
         padding: 36px 126px 36px 126px;

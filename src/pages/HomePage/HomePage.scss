@@ -1,3 +1,5 @@
+@import '../../data/variables.scss';
+
 .home-page-container {
     display: flex;
     flex-direction: column;
@@ -5,7 +7,7 @@
 }
 
 .img-container {
-    @media (max-width: 768px) {
+    @media (max-width: map-get($breakPoints, m)) {
         width: 550px;
         height: 275px;
         margin-left: -130px;

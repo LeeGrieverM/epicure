@@ -1,3 +1,5 @@
+@import '../../data/variables.scss';
+
 .container {
     color: #FFFFFF;
     background-color: #FFFFFF;
@@ -7,7 +9,7 @@
     margin-left: 90px;
     margin-right: 90px;
     margin-top: 10px;
-    @media (max-width: 768px) {
+    @media (max-width: map-get($breakPoints, m)) {
         margin-left: 20px;
         margin-right: 20px;
     }
