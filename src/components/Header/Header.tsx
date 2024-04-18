@@ -3,27 +3,19 @@ import mainIcon from '../../assets/icons/mainIcon.svg'
 import searchIcon from '../../assets/icons/searchIcon.svg'
 import personIcon from '../../assets/icons/personIcon.svg'
 import shoppingBagIcon from '../../assets/icons/shoppingBagIcon.svg'
-import {
-    LogoContainer,
-    Icon,
-    Container,
-    IconsContainer,
-    HamburgerButton,
-} from './styles'
+import './Header.scss'
 
 function Header() {
   return (
-    <>
-    <Container>
-        <HamburgerButton/>
-        <Icon src={mainIcon} alt='main-logo'/>
-        <IconsContainer>
-        <LogoContainer src={searchIcon} alt='shopping-bag'/>
-        <LogoContainer src={personIcon} alt='shopping-bag'/>
-        <LogoContainer src={shoppingBagIcon} alt='shopping-bag'/>
-        </IconsContainer>
-    </Container>
-    </>
+    <div className="container">
+        <button className="hamburger-button"/>
+        <img src={mainIcon} alt='main-logo' className="main-icon"/>
+        <div className="icons-container">
+            <img src={searchIcon} alt='shopping-bag' className="logo-container"/>
+            <img src={personIcon} alt='shopping-bag' className="logo-container"/>
+            <img src={shoppingBagIcon} alt='shopping-bag' className="logo-container"/>
+        </div>
+    </div>
   )
 }
 

@@ -3,7 +3,9 @@ import { Container } from './styles'
 
 function SearchBar() {
   return (
-
+    <Container>
+      <Hi></Hi>
+    </Container>
   )
 }
 
