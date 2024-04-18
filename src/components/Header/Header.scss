@@ -12,7 +12,7 @@
     margin-left: 20px;
     margin-right: -10px;
   }
-  @media (min-width: map-get($breakPoints, xl)) {
+  @media (min-width: map-get($breakPoints, l)) {
     justify-content: space-around;
     margin-left: -200px;
     margin-right: -200px;
@@ -52,7 +52,7 @@
 
 .text-button {
     display: none;
-    @media (min-width: map-get($breakPoints, xl)) {
+    @media (min-width: map-get($breakPoints, l)) {
         display: block;
         border: none;
         font-family: $font;
@@ -69,7 +69,7 @@
 
 .epicure-button {
     display: none;
-    @media (min-width: map-get($breakPoints, xl)) {
+    @media (min-width: map-get($breakPoints, l)) {
         display: block;
         border: none;
         font-family: $font;
@@ -86,7 +86,7 @@
 
 .titles-container {
     display: none;
-    @media (min-width: map-get($breakPoints, xl)) {
+    @media (min-width: map-get($breakPoints, l)) {
         display: flex;
         column-gap: 30px;
         margin-left: -620px;

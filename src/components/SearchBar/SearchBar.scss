@@ -2,33 +2,29 @@
 
 .search-area-container {
     position: relative;
-
+    border: 4px solid pink;
     @media (max-width: map-get($breakPoints, m)) {
-        width: 550px;
-        height: 275px;
-        margin-left: -130px;
+        width: 100%;
     }
 }
 
 .search-bar-container {
     position: absolute;
-    top: 240px;
-    left: 322px;
-    width: 770px;
-    height: 220px;
+    inset: 0;
+    width: 55%;
+    height: 25%;
+    margin: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     opacity: 0.88;
     background-color: #FFFFFF;
-    row-gap: 15px;
+    row-gap: 10px;
     @media (max-width: map-get($breakPoints, m)) {
-        width: 335px;
-        height: 144px;
-        top: 60px;
-        left: 173px;
         margin: auto;
+        width: 93%;
+        height: 60%;
     }
 }
 
