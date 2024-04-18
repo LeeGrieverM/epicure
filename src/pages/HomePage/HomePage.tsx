@@ -1,16 +1,13 @@
 import Header from "../../components/Header/Header"
 import homePagePic from '../../assets/images/homepagePic.png'
-import {
-  Container,
-  ImgContainer
-} from "./styles"
+import './HomePage.scss'
 
 function HomePage() {
   return (
-    <Container>
+    <div className="home-page-container">
     <Header/>
-    <ImgContainer src={homePagePic} alt='home-page-pic'></ImgContainer>
-    </Container>
+    <img src={homePagePic} alt='home-page-pic' className="img-container"/>
+    </div>
   )
 }
 

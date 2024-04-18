@@ -1,11 +1,10 @@
 import React from 'react'
-import { Container } from './styles'
+import './SearchBar.scss'
 
 function SearchBar() {
   return (
-    <Container>
-      <Hi></Hi>
-    </Container>
+    <div className="search-bar-container">
+    </div>
   )
 }
 
