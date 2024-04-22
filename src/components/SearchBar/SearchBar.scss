@@ -2,6 +2,7 @@
 
 .search-area-container {
     position: relative;
+    border: 2px solid blue;
     @media (max-width: map-get($breakPoints, m)) {
         width: 100%;
     }
@@ -30,7 +31,8 @@
 
 .img-container {
     width: 100%;
-    height: auto;
+    height: 100%;
+    display: block;
     @media (max-width: map-get($breakPoints, m)) {
 
     }
