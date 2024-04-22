@@ -1,4 +1,3 @@
-import React from "react";
 import mainIcon from "../../assets/icons/mainIcon.svg";
 import { textButtonsData, iconButtonsData } from "../../data/constants";
 import "./Header.scss";
@@ -11,10 +10,10 @@ function Header() {
       <button className="hamburger-button" />
       <img src={mainIcon} alt="main-logo" className="main-icon" />
       <ul className='titles-container'>
-        {textButtonsData.map(({ text, className }, index) => (
+        {textButtonsData.map(({ img, className }, index) => (
           <li key={index}>
             <button className={className}>
-              {text}
+              <img src={img} alt='text-button'/>
             </button>
           </li>
         ))}
