@@ -1,0 +1,24 @@
+@import "../../../data/variables.scss";
+
+.dish-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+    border: 2px solid red;
+}
+
+.dish-icon {
+    width: 40px;
+    height: 30px;
+}
+
+.dish-ingredients {
+    font-family: $font;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 200;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
