@@ -1,19 +1,18 @@
 @import "../../../data/variables.scss";
 
 .restaurant-chef-stars-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    row-gap: 10px;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
 }
 
 .chef-name {
-    font-family: $font;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 200;
-    line-height: 30px;
-    letter-spacing: 2px;
+  font-family: $font;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 30px;
+  letter-spacing: 2px;
 }
-

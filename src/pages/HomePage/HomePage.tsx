@@ -10,9 +10,13 @@ function HomePage() {
     <div className="home-page-container">
       <Header />
       <SearchBar />
-      <Carousel cards={restaurantsData} title={text.popularRestaurantsTitle}/>
-      <Carousel cards={dishesData} title={text.signatureDishTitle}/>
-      <IconMeanings/>
+      <Carousel cards={restaurantsData} title={text.popularRestaurantsTitle} />
+      <button className="all-restaurants-button">
+        <span className="mobile-background-image" />
+        <span className="desktop-background-image" />
+      </button>
+      <Carousel cards={dishesData} title={text.signatureDishTitle} />
+      <IconMeanings />
     </div>
   );
 }
