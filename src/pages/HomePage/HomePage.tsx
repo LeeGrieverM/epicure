@@ -10,10 +10,12 @@ import {
   chefRestaurantsData,
   text,
   chefData,
-  carouselDynamicStyles,
-  containerDynamicStyles,
-  containerRegDynamicStyles,
 } from "../../data/constants";
+import {
+  carouselDynamicStyles,
+  containerChefDynamicStyles,
+  containerRegDynamicStyles,
+} from '../../data/generalStyles';
 
 function HomePage() {
   return (
@@ -42,12 +44,13 @@ function HomePage() {
         title={chefData.title}
         chefName={chefData.chefName}
         text={chefData.text}
-        img={chefData.chefImg}
+        desktopImg={chefData.desktopImg}
+        mobileImg={chefData.mobileImg}
       />
       <Carousel
         cards={chefRestaurantsData}
         title={chefData.carouselTitle}
-        containerDynamicStyles={containerDynamicStyles}
+        containerDynamicStyles={containerChefDynamicStyles}
         carouselDynamicStyles={carouselDynamicStyles}
       />
     </div>
