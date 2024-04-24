@@ -33,12 +33,12 @@ import kitchenMarketImg from "../assets/images/kitchenMarket.png";
 import mashyaImg from "../assets/images/mashya.png";
 
 // chef image
-import chefImg from "../assets/images/untitled-1@3x 1.svg";
+import chefImg from "../assets/images/yossiShitrit.png";
 
 // about us logos
-import aboutUsEpicureLogo from '../assets/icons/aboutUsLogo.svg';
-import appleDownloadLogo from '../assets/images/appleDownloadlogo.png';
-import googleDownloadLogo from '../assets/images/googleDownloadLogo.png';
+import aboutUsEpicureLogo from "../assets/icons/aboutUsLogo.svg";
+import appleDownloadLogo from "../assets/images/appleDownloadlogo.png";
+import googleDownloadLogo from "../assets/images/googleDownloadLogo.png";
 
 export const paths = {
   root: "/",
@@ -56,11 +56,7 @@ export const text = {
 export const iconButtonsData = [
   { icon: searchIcon, alt: "search-icon", className: "search-button" },
   { icon: personIcon, alt: "person-icon", className: "person-button" },
-  {
-    icon: shoppingBagIcon,
-    alt: "shopping-bag-icon",
-    className: "shopping-bag-button",
-  },
+  { icon: shoppingBagIcon, alt: "shopping-bag-icon", className: "shopping-bag-button" },
 ];
 
 const breakPoints = {
@@ -90,14 +86,14 @@ export const swiperBreakpoints = {
   [breakPoints.l]: {
     slidesPerView: 3,
     noSwiping: false,
-    allowSlideNext: false, 
-    allowSlidePrev: false, 
+    allowSlideNext: false,
+    allowSlidePrev: false,
   },
   [breakPoints.xl]: {
     slidesPerView: 3,
     noSwiping: false,
-    allowSlideNext: false, 
-    allowSlidePrev: false, 
+    allowSlideNext: false,
+    allowSlidePrev: false,
   },
 };
 
@@ -268,5 +264,8 @@ export const aboutUsData = {
   googleDownloadLogo: googleDownloadLogo,
 };
 
-
-
+export const footerButtonsData = [
+  { title: "Contact Us", alt: "contact-us" },
+  { title: "Terms of Use", alt: "terms-of-use" },
+  { title: "Privacy Policy", alt: "privacy-policy" },
+];

@@ -5,7 +5,7 @@ import Carousel from "../../components/Carousel/Carousel";
 import IconMeanings from "../../components/IconMeanings/IconMeanings";
 import ChefOfTheWeek from "../../components/ChefOfTheWeek/ChefOfTheWeek";
 import AboutUs from "../../components/AboutUs/AboutUs";
-
+import Footer from "../../components/Footer/Footer";
 import {
   restaurantsData,
   dishesData,
@@ -56,7 +56,7 @@ function HomePage() {
         carouselDynamicStyles={carouselDynamicStyles}
       />
       <AboutUs title={aboutUsData.title} p1={aboutUsData.p1} p2={aboutUsData.p2} logo={aboutUsData.logo} appleDownloadLogo={aboutUsData.appleDownloadLogo} googleDownloadLogo={aboutUsData.googleDownloadLogo}/> 
-
+      <Footer/>
     </div>
   );
 }
