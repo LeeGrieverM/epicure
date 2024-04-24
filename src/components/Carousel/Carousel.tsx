@@ -5,11 +5,22 @@ import Card from "../Card/Card";
 import { CardData } from "../../types/cardTypes";
 import { swiperBreakpoints } from "../../data/constants";
 
-const Carousel = ({ cards, title }: { cards: CardData[]; title: string }) => {
+const Carousel = ({
+  cards,
+  title,
+  containerDynamicStyles,
+  carouselDynamicStyles,
+}: {
+  cards: CardData[];
+  title: string;
+  containerDynamicStyles?: object;
+  carouselDynamicStyles?: object;
+}) => {
   return (
-    <div className="carousel-container">
+    <div className="carousel-container" style={containerDynamicStyles}>
       <h1 className="carousel-title">{title}</h1>
       <Swiper
+        style={carouselDynamicStyles}
         spaceBetween={30}
         slidesPerView={3}
         breakpoints={swiperBreakpoints}

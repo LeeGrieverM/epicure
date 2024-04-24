@@ -27,6 +27,14 @@ import PadKiMaoImg from "../assets/images/padKiMao.png";
 import GarbanzoFritoImg from "../assets/images/garbanzoFrito.png";
 import smokedPizzaImg from "../assets/images/smokedPizza.png";
 
+// chef restaurants images
+import onzaImg from "../assets/images/onza.png";
+import kitchenMarketImg from "../assets/images/kitchenMarket.png";
+import mashyaImg from "../assets/images/mashya.png";
+
+// chef image
+import chefImg from "../assets/images/yossiShitrit.png";
+
 export const paths = {
   root: "/",
   restaurants: "/restaurants",
@@ -198,3 +206,69 @@ export const restaurantsData: CardData[] = [
     }),
   },
 ];
+
+export const chefData = {
+  title: "CHEF OF THE WEEK: ",
+  text: "Chef Yossi Shitrit has been living and breathing his culinary dreams for more than two decades, including running the kitchen in his first restaurant, the fondly-remembered Violet, located in Moshav  Udim. Shitrit's creativity and culinary  acumen born of long experience  are expressed in the every detail of each and every dish.",
+  chefName: "Yossi Shitrit",
+  chefImg: chefImg,
+  carouselTitle: "Yossi's Restaurants",
+};
+
+export const chefRestaurantsData: CardData[] = [
+  {
+    title: "Onza",
+    img: onzaImg,
+  },
+  {
+    title: "Kitchen Market",
+    img: kitchenMarketImg,
+  },
+  {
+    title: "Mashya",
+    img: mashyaImg,
+  },
+  {
+    title: "Mashya",
+    img: mashyaImg,
+  },
+  {
+    title: "Mashya",
+    img: mashyaImg,
+  },
+  {
+    title: "Mashya",
+    img: mashyaImg,
+  },
+];
+
+export const carouselDynamicStyles = {
+  width: "60%",
+  height: "100%",
+  margin: "0 auto",
+};
+
+export const containerDynamicStyles = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
+  justifyContent: "flex-start",
+  rowGap: "30px",
+};
+
+export const containerRegDynamicStyles = {
+  margin: "0 auto",
+  paddingTop: "4%",
+  width: "100%",
+  display: "flex",
+  height: "100%",
+  flexDirection: "column",
+  justifyContent: "flex-start",
+  alignItems: "center",
+  rowGap: "30px",
+};
+
+if (window.matchMedia("(max-width: 768px)").matches) {
+  containerRegDynamicStyles.alignItems = "flex-start";
+  containerRegDynamicStyles.rowGap = "20px";
+}
