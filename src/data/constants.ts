@@ -27,6 +27,15 @@ import PadKiMaoImg from "../assets/images/padKiMao.png";
 import GarbanzoFritoImg from "../assets/images/garbanzoFrito.png";
 import smokedPizzaImg from "../assets/images/smokedPizza.png";
 
+// chef restaurants images
+import onzaImg from "../assets/images/onza.png";
+import kitchenMarketImg from "../assets/images/kitchenMarket.png";
+import mashyaImg from "../assets/images/mashya.png";
+
+// chef image
+import desktopChefImg from "../assets/images/yossiShitrit.png";
+import mobileChefImg from "../assets/images/yossiShitritMobile.png";
+
 export const paths = {
   root: "/",
   restaurants: "/restaurants",
@@ -198,3 +207,40 @@ export const restaurantsData: CardData[] = [
     }),
   },
 ];
+
+export const chefData = {
+  title: "CHEF OF THE WEEK: ",
+  text: "Chef Yossi Shitrit has been living and breathing his culinary dreams for more than two decades, including running the kitchen in his first restaurant, the fondly-remembered Violet, located in Moshav  Udim. Shitrit's creativity and culinary  acumen born of long experience  are expressed in the every detail of each and every dish.",
+  chefName: "Yossi Shitrit",
+  desktopImg: desktopChefImg,
+  mobileImg: mobileChefImg,
+  carouselTitle: "YOSSI'S RESTAURANTS",
+};
+
+export const chefRestaurantsData: CardData[] = [
+  {
+    title: "Onza",
+    img: onzaImg,
+  },
+  {
+    title: "Kitchen Market",
+    img: kitchenMarketImg,
+  },
+  {
+    title: "Mashya",
+    img: mashyaImg,
+  },
+  {
+    title: "Mashya",
+    img: mashyaImg,
+  },
+  {
+    title: "Mashya",
+    img: mashyaImg,
+  },
+  {
+    title: "Mashya",
+    img: mashyaImg,
+  },
+];
+
