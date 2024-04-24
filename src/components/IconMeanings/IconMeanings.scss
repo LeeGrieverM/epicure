@@ -9,9 +9,9 @@
   row-gap: 10px;
   font-family: $font;
   padding-top: 0.5%;
-  height: 20%;
   @media (max-width: map-get($breakPoints, m)) {
-    height: 580px;
+    row-gap: 20px;
+    padding-top: 0%;
   }
 }
 
@@ -32,6 +32,10 @@
 .icon-img {
   width: 60px;
   height: 60px;
+  @media (max-width: map-get($breakPoints, m)) {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .icons-list-container {
@@ -45,6 +49,6 @@
   column-gap: 40px;
   @media (max-width: map-get($breakPoints, m)) {
     flex-direction: column;
-    height: 580px;
+    row-gap: 40px;
   }
 }

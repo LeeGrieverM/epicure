@@ -1,4 +1,3 @@
-import React from "react";
 import "./SearchBar.scss";
 import { text } from "../../data/constants";
 import homePagePic from "../../assets/images/homepagePic.png";

@@ -6,11 +6,20 @@
   flex-direction: column;
   row-gap: 10px;
   justify-content: center;
+  @media (max-width: map-get($breakPoints, m)) {
+    align-items: flex-start;
+    padding-left: 6%;
+    padding-right: 9%;
+    row-gap: 14px;
+  }
 }
 
 .dish-icon {
   width: 40px;
   height: 30px;
+  @media (max-width: map-get($breakPoints, m)) {
+    order: 2; 
+  }
 }
 
 .dish-ingredients {
@@ -20,13 +29,21 @@
   font-weight: 200;
   line-height: 30px;
   letter-spacing: 1px;
+  @media (max-width: map-get($breakPoints, m)) {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-align: left;
+  }
 }
 
 .dish-price-container {
   display: flex;
-  flex-direction: row-reverse;
   align-items: center;
   column-gap: 10%;
+  @media (max-width: map-get($breakPoints, m)) {
+    order: 3; 
+  }
 }
 
 .shekel-icon {
@@ -40,6 +57,13 @@
   line-height: 30px;
   letter-spacing: 2px;
   text-align: center;
+  @media (max-width: map-get($breakPoints, m)) {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
 }
 
 .dish-price-container::before,
@@ -47,7 +71,7 @@
   content: "";
   position: absolute;
   height: 1px;
-  width: 112px;
+  width: 80px;
   background-color: map-get($colors, gray);
   @media (max-width: map-get($breakPoints, m)) {
     display: none;
@@ -55,9 +79,11 @@
 }
 
 .dish-price-container::before {
-  left: 12%;
+  left: 13%;
 }
 
 .dish-price-container::after {
-  right: 13%;
+  right: 11%;
 }
+
+

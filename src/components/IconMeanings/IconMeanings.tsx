@@ -1,4 +1,3 @@
-import React from "react";
 import "./IconMeanings.scss";
 import { iconsMeaningData } from "../../data/constants";
 

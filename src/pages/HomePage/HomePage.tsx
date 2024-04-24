@@ -16,6 +16,9 @@ function HomePage() {
         <span className="desktop-background-image" />
       </button>
       <Carousel cards={dishesData} title={text.signatureDishTitle} />
+      <button className="all-restaurants-button">
+        <span className="mobile-background-image" />
+      </button>
       <IconMeanings />
     </div>
   );
