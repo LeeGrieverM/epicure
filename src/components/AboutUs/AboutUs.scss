@@ -5,21 +5,35 @@
   display: flex;
   padding-left: 6%;
   padding-right: 6%;
+  @media (max-width: map-get($breakPoints, m)) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 10%;
+    padding-top: 5%;
+  }
 }
 
 .about-us-left-container {
   width: 50%;
   font-family: $font;
+  @media (max-width: map-get($breakPoints, m)) {
+    width: 100%;
+  }
 }
 
 .about-us-title {
-padding-top: 4%;
+  padding-top: 4%;
   font-size: 30px;
   font-weight: 200;
   line-height: 35px;
   letter-spacing: 2px;
   text-align: left;
   padding-bottom: 2%;
+  @media (max-width: map-get($breakPoints, m)) {
+    font-size: 18px;
+    letter-spacing: 1.25px;
+  }
 }
 
 .about-us-paragraph {
@@ -29,6 +43,10 @@ padding-top: 4%;
   letter-spacing: 2px;
   text-align: left;
   padding-bottom: 5%;
+  @media (max-width: map-get($breakPoints, m)) {
+    font-size: 18px;
+    line-height: 28px;
+  }
 }
 
 .about-us-right-container {
@@ -36,6 +54,10 @@ padding-top: 4%;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: map-get($breakPoints, m)) {
+    width: 100%;
+  justify-content: flex-start;
+  }
 }
 
 .about-us-epicure-logo {
@@ -43,4 +65,10 @@ padding-top: 4%;
   width: 45%;
   height: 45%;
   margin-left: 50%;
+  @media (max-width: map-get($breakPoints, m)) {
+    width: 30%;
+    height: 30%;
+    margin-left: 0;
+
+  }
 }

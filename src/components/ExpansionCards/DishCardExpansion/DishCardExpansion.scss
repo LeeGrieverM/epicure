@@ -6,6 +6,8 @@
   flex-direction: column;
   row-gap: 10px;
   justify-content: center;
+  border: 2px solid yellow;
+  height: 100%;
   @media (max-width: map-get($breakPoints, m)) {
     align-items: flex-start;
     padding-left: 6%;
