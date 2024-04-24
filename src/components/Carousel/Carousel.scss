@@ -9,15 +9,25 @@
   justify-content: center;
   align-items: center;
   row-gap: 30px;
+  @media (max-width: map-get($breakPoints, m)) {
+    align-items: flex-start;
+    row-gap: 20px;
+  }
 }
 
 .carousel-title {
   font-family: $font;
   font-size: 30px;
-  font-weight: 190;
+  font-weight: 200;
   line-height: 40px;
   letter-spacing: 2px;
   text-align: center;
+  @media (max-width: map-get($breakPoints, m)) {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1.25px;
+    padding-left: 9%;
+  }
 }
 
 .swiper {

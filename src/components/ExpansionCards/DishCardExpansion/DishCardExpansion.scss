@@ -49,6 +49,9 @@
   height: 1px;
   width: 112px;
   background-color: map-get($colors, gray);
+  @media (max-width: map-get($breakPoints, m)) {
+    display: none;
+  }
 }
 
 .dish-price-container::before {

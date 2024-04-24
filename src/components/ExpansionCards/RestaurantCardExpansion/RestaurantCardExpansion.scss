@@ -6,6 +6,13 @@
   flex-direction: column;
   row-gap: 10px;
   justify-content: center;
+
+  @media (max-width: map-get($breakPoints, m)) {
+    align-items: flex-start;
+    .star-rating-container {
+      display: none;
+    }
+  }
 }
 
 .chef-name {
@@ -15,4 +22,15 @@
   font-weight: 200;
   line-height: 30px;
   letter-spacing: 2px;
+  @media (max-width: map-get($breakPoints, m)) {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-align: left;
+    padding-left: 7%;
+    padding-bottom: 6%;
+  }
+
+
+
 }
