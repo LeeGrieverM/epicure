@@ -6,4 +6,49 @@
   row-gap: 10px;
   width: 100%;
   height: 100%;
+  @media (max-width: map-get($breakPoints, m)) {
+    row-gap: 25px;
+  }
+}
+
+.all-restaurants-button {
+  display: block;
+  border: none;
+  height: 29px;
+  width: 150px;
+  position: relative;
+  background-color: transparent;
+  margin-left: 82%;
+  margin-top: 1%;
+  @media (max-width: map-get($breakPoints, m)) {
+    margin-left: 10%;
+    width: 142px;
+    height: 30px;
+  }
+}
+
+.all-restaurants-button .desktop-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/icons/allRestaurantsButtonDesktop.svg");
+  background-size: contain;
+  @media (max-width: map-get($breakPoints, m)) {
+    display: none;
+  }
+}
+
+.all-restaurants-button .mobile-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/icons/allRestaurantsButtonMobile.svg");
+  background-size: contain;
+  @media (min-width: map-get($breakPoints, l)) {
+    display: none;
+  }
 }

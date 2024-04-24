@@ -1,4 +1,3 @@
-import React from "react";
 import "./IconMeanings.scss";
 import { iconsMeaningData } from "../../data/constants";
 
@@ -9,7 +8,7 @@ function IconMeanings() {
       <ul className="icons-list-container">
         {iconsMeaningData.map(({ icon, alt, className }) => (
           <li key={alt} className="icon-meaning">
-            <img src={icon} alt={alt} className="icon-img"/>
+            <img src={icon} alt={alt} className="icon-img" />
             {className}
           </li>
         ))}
