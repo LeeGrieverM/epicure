@@ -3,7 +3,8 @@
 .chef-of-the-week-container {
   display: flex;
   flex-direction: column;
-  padding-top: 10%;
+  padding-top: 3%;
+  padding-bottom: 3%;
   @media (max-width: map-get($breakPoints, m)) {
    align-items: flex-start;
    margin-left: 5%;
@@ -31,7 +32,7 @@
 
 .img-text-container {
   display: flex;
-  padding-top: 5%;
+  padding-top: 3%;
   margin-left: 9%;
   margin-right: 9%;
   @media (max-width: map-get($breakPoints, m)) {

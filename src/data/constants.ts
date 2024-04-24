@@ -36,6 +36,9 @@ import mashyaImg from "../assets/images/mashya.png";
 import desktopChefImg from "../assets/images/yossiShitrit.png";
 import mobileChefImg from "../assets/images/yossiShitritMobile.png";
 
+// about us logos
+import aboutUsEpicureLogo from '../assets/icons/aboutUsLogo.svg';
+import downloadlogos from '../assets/images/downloadsLogos.png';
 export const paths = {
   root: "/",
   restaurants: "/restaurants",
@@ -243,4 +246,14 @@ export const chefRestaurantsData: CardData[] = [
     img: mashyaImg,
   },
 ];
+
+export const aboutUsData = {
+  title: "ABOUT US: ",
+  p1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum non eu ipsum. Cras porta malesuada eros, eget blandit turpis suscipit at.  Vestibulum sed massa in magna sodales porta.  Vivamus elit urna, dignissim a vestibulum.",
+  p2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum no eu ipsum. Cras porta malesuada eros.",
+  logo: aboutUsEpicureLogo,
+  downloadlogos: downloadlogos,
+};
+
+
 

@@ -1,0 +1,46 @@
+@import "../../data/variables.scss";
+
+.about-us-container {
+  background-color: map-get($colors, offWhite);
+  display: flex;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+.about-us-left-container {
+  width: 50%;
+  font-family: $font;
+}
+
+.about-us-title {
+padding-top: 4%;
+  font-size: 30px;
+  font-weight: 200;
+  line-height: 35px;
+  letter-spacing: 2px;
+  text-align: left;
+  padding-bottom: 2%;
+}
+
+.about-us-paragraph {
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 30px;
+  letter-spacing: 2px;
+  text-align: left;
+  padding-bottom: 5%;
+}
+
+.about-us-right-container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about-us-epicure-logo {
+  display: block;
+  width: 45%;
+  height: 45%;
+  margin-left: 50%;
+}
