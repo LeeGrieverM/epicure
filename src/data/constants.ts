@@ -33,12 +33,13 @@ import kitchenMarketImg from "../assets/images/kitchenMarket.png";
 import mashyaImg from "../assets/images/mashya.png";
 
 // chef image
-import desktopChefImg from "../assets/images/yossiShitrit.png";
-import mobileChefImg from "../assets/images/yossiShitritMobile.png";
+import chefImg from "../assets/images/untitled-1@3x 1.svg";
 
 // about us logos
 import aboutUsEpicureLogo from '../assets/icons/aboutUsLogo.svg';
-import downloadlogos from '../assets/images/downloadsLogos.png';
+import appleDownloadLogo from '../assets/images/appleDownloadlogo.png';
+import googleDownloadLogo from '../assets/images/googleDownloadLogo.png';
+
 export const paths = {
   root: "/",
   restaurants: "/restaurants",
@@ -73,18 +74,30 @@ const breakPoints = {
 export const swiperBreakpoints = {
   [breakPoints.xs]: {
     slidesPerView: 1.3,
+    allowSlideNext: true,
+    allowSlidePrev: true,
   },
   [breakPoints.s]: {
     slidesPerView: 1.5,
+    allowSlideNext: true,
+    allowSlidePrev: true,
   },
   [breakPoints.m]: {
     slidesPerView: 2,
+    allowSlideNext: true,
+    allowSlidePrev: true,
   },
   [breakPoints.l]: {
     slidesPerView: 3,
+    noSwiping: false,
+    allowSlideNext: false, 
+    allowSlidePrev: false, 
   },
   [breakPoints.xl]: {
     slidesPerView: 3,
+    noSwiping: false,
+    allowSlideNext: false, 
+    allowSlidePrev: false, 
   },
 };
 
@@ -215,8 +228,7 @@ export const chefData = {
   title: "CHEF OF THE WEEK: ",
   text: "Chef Yossi Shitrit has been living and breathing his culinary dreams for more than two decades, including running the kitchen in his first restaurant, the fondly-remembered Violet, located in Moshav  Udim. Shitrit's creativity and culinary  acumen born of long experience  are expressed in the every detail of each and every dish.",
   chefName: "Yossi Shitrit",
-  desktopImg: desktopChefImg,
-  mobileImg: mobileChefImg,
+  img: chefImg,
   carouselTitle: "YOSSI'S RESTAURANTS",
 };
 
@@ -252,7 +264,8 @@ export const aboutUsData = {
   p1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum non eu ipsum. Cras porta malesuada eros, eget blandit turpis suscipit at.  Vestibulum sed massa in magna sodales porta.  Vivamus elit urna, dignissim a vestibulum.",
   p2: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum no eu ipsum. Cras porta malesuada eros.",
   logo: aboutUsEpicureLogo,
-  downloadlogos: downloadlogos,
+  appleDownloadLogo: appleDownloadLogo,
+  googleDownloadLogo: googleDownloadLogo,
 };
 
 

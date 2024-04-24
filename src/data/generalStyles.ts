@@ -1,12 +1,13 @@
 export const carouselDynamicStyles = {
-  width: "70%",
+  width: "80%",
   height: "100%",
   margin: "0 auto",
   padding: "0",
+  marginLeft: '0',
 };
 
 if (window.matchMedia("(max-width: 768px)").matches) {
-  carouselDynamicStyles.width = "80%";
+  carouselDynamicStyles.width = "100%";
   carouselDynamicStyles.height = "auto";
   carouselDynamicStyles.padding = "0";
 }
@@ -21,7 +22,7 @@ export const containerChefDynamicStyles = {
 };
 
 if (window.matchMedia("(max-width: 768px)").matches) {
-  containerChefDynamicStyles.marginLeft = "0";
+  containerChefDynamicStyles.marginLeft = "5%";
 }
 
 export const containerRegDynamicStyles = {
@@ -34,9 +35,13 @@ export const containerRegDynamicStyles = {
   justifyContent: "flex-start",
   alignItems: "center",
   rowGap: "30px",
+  marginLeft: '0',
+  paddinfRight: '0',
 };
 
 if (window.matchMedia("(max-width: 768px)").matches) {
   containerRegDynamicStyles.alignItems = "flex-start";
   containerRegDynamicStyles.rowGap = "20px";
+  containerRegDynamicStyles.width= "96%";
+  containerRegDynamicStyles.marginLeft = "4%";
 }

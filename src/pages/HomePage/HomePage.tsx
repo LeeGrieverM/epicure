@@ -47,8 +47,7 @@ function HomePage() {
         title={chefData.title}
         chefName={chefData.chefName}
         text={chefData.text}
-        desktopImg={chefData.desktopImg}
-        mobileImg={chefData.mobileImg}
+        img={chefData.img}
       />
       <Carousel
         cards={chefRestaurantsData}
@@ -56,7 +55,7 @@ function HomePage() {
         containerDynamicStyles={containerChefDynamicStyles}
         carouselDynamicStyles={carouselDynamicStyles}
       />
-      <AboutUs title={aboutUsData.title} p1={aboutUsData.p1} p2={aboutUsData.p2} logo={aboutUsData.logo} downloadlogos={aboutUsData.downloadlogos}/> 
+      <AboutUs title={aboutUsData.title} p1={aboutUsData.p1} p2={aboutUsData.p2} logo={aboutUsData.logo} appleDownloadLogo={aboutUsData.appleDownloadLogo} googleDownloadLogo={aboutUsData.googleDownloadLogo}/> 
 
     </div>
   );
