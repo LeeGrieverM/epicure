@@ -18,6 +18,7 @@ const ChefOfTheWeek = ({
         <div className="chef-img-container">
         <img className='chef-img' src={img} alt={chefName}/>
         <div className="chef-name-on-img">
+          {chefName}
         </div>
         </div>
 
