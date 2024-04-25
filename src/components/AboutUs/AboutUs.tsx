@@ -1,4 +1,5 @@
 import "./AboutUs.scss";
+import { Fade } from "react-awesome-reveal";
 
 const AboutUs = ({
   title,
@@ -16,6 +17,7 @@ const AboutUs = ({
   googleDownloadLogo: string;
 }) => {
   return (
+    <Fade>
     <div className="about-us-container">
       <div className="about-us-left-container">
         <h1 className="about-us-title">{title}</h1>
@@ -42,6 +44,7 @@ const AboutUs = ({
         <img className="about-us-epicure-logo" src={logo} alt={title} />
       </div>
     </div>
+    </Fade>
   );
 };
 

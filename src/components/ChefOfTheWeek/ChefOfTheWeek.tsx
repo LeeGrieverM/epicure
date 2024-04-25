@@ -1,4 +1,5 @@
 import "./ChefOfTheWeek.scss";
+import { Fade } from "react-awesome-reveal";
 
 const ChefOfTheWeek = ({
   title,
@@ -12,6 +13,8 @@ const ChefOfTheWeek = ({
   img: string;
 }) => {
   return (
+    <Fade>
+
     <div className="chef-of-the-week-container">
       <h1 className="chef-of-the-week-title">{title}</h1>
       <div className="img-text-container">
@@ -25,6 +28,8 @@ const ChefOfTheWeek = ({
         <p className="chef-of-the-week-text">{text}</p>
       </div>
     </div>
+    </Fade>
+
   );
 };
 
