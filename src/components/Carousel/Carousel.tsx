@@ -19,11 +19,13 @@ const Carousel = ({
   return (
     <div className="carousel-container" style={containerDynamicStyles}>
       <h1 className="carousel-title">{title}</h1>
+      <div className="swiper-container">
       <Swiper
         style={carouselDynamicStyles}
         spaceBetween={30}
         slidesPerView={3}
         breakpoints={swiperBreakpoints}
+  
       >
         {cards.map((card, index) => (
           <SwiperSlide key={index}>
@@ -31,6 +33,7 @@ const Carousel = ({
           </SwiperSlide>
         ))}
       </Swiper>
+      </div>
     </div>
   );
 };

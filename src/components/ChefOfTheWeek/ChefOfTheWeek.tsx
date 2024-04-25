@@ -4,21 +4,23 @@ const ChefOfTheWeek = ({
   title,
   chefName,
   text,
-  desktopImg,
-  mobileImg,
+  img
 }: {
   title: string;
   chefName: string;
   text: string;
-  desktopImg: string;
-  mobileImg: string;
+  img: string;
 }) => {
   return (
     <div className="chef-of-the-week-container">
       <h1 className="chef-of-the-week-title">{title}</h1>
       <div className="img-text-container">
-        <img className='chef-img-desktop' src={desktopImg} alt={chefName}/>
-        <img className='chef-img-mobile' src={mobileImg} alt={chefName}/>
+        <div className="chef-img-container">
+        <img className='chef-img' src={img} alt={chefName}/>
+        <div className="chef-name-on-img">
+        </div>
+        </div>
+
         <p className="chef-of-the-week-text">{text}</p>
       </div>
     </div>
