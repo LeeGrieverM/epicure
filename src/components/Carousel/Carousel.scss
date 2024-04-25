@@ -11,7 +11,6 @@
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 1.25px;
-    // padding-left: 8%;
   }
 }
 
@@ -19,9 +18,8 @@
   width: 85%;
   display: flex;
   @media (max-width: map-get($breakPoints, m)) {
-   width: 100%;
+    width: 100%;
   }
-  
 }
 
 .swiper {

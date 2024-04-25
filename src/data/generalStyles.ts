@@ -3,7 +3,7 @@ export const carouselDynamicStyles = {
   height: "100%",
   margin: "0 auto",
   padding: "0",
-  marginLeft: '0',
+  marginLeft: "0",
 };
 
 if (window.matchMedia("(max-width: 768px)").matches) {
@@ -35,13 +35,13 @@ export const containerRegDynamicStyles = {
   justifyContent: "flex-start",
   alignItems: "center",
   rowGap: "30px",
-  marginLeft: '0',
-  paddinfRight: '0',
+  marginLeft: "0",
+  paddinfRight: "0",
 };
 
 if (window.matchMedia("(max-width: 768px)").matches) {
   containerRegDynamicStyles.alignItems = "flex-start";
   containerRegDynamicStyles.rowGap = "20px";
-  containerRegDynamicStyles.width= "96%";
+  containerRegDynamicStyles.width = "96%";
   containerRegDynamicStyles.marginLeft = "4%";
 }
