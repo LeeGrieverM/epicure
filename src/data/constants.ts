@@ -273,3 +273,8 @@ export const footerButtonsData = [
   { title: "Terms of Use", alt: "terms-of-use" },
   { title: "Privacy Policy", alt: "privacy-policy" },
 ];
+
+export const hamburgerButtons = [
+  { title: "Restaurants", alt: "restaurants" },
+  { title: "Chefs", alt: "chefs" },
+];

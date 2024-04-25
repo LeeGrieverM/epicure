@@ -1,16 +1,11 @@
 import "./Footer.scss";
+import ButtonsList from "../ButtonsList/ButtonsList";
 import { footerButtonsData } from "../../data/constants";
 
 const Footer = () => {
   return (
     <div className="footer-container">
-      <ul className="footer-buttons-list">
-        {footerButtonsData.map(({ title, alt }) => (
-          <li key={alt}>
-            <button className={`footer-button`}>{title}</button>
-          </li>
-        ))}
-      </ul>
+     <ButtonsList buttonsData={footerButtonsData}/>
     </div>
   );
 };
