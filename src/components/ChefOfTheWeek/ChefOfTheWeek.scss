@@ -5,7 +5,6 @@
   flex-direction: column;
   padding-top: 3%;
   padding-bottom: 3%;
-
   @media (max-width: map-get($breakPoints, m)) {
     align-items: flex-start;
     margin-left: 5%;
@@ -38,7 +37,6 @@
   margin-right: 9%;
   align-items: flex-start;
   justify-content: center;
-
   @media (max-width: map-get($breakPoints, m)) {
     flex-direction: column;
     margin-left: 0%;
@@ -78,6 +76,7 @@
   letter-spacing: 2.7px;
   @media (max-width: map-get($breakPoints, m)) {
     font-size: 18px;
+    width: 94%;
   }
 }
 
