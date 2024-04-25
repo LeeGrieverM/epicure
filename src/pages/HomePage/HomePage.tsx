@@ -8,6 +8,8 @@ import AboutUs from "../../components/AboutUs/AboutUs";
 import Footer from "../../components/Footer/Footer";
 import { Fade } from "react-awesome-reveal";
 
+import { Fade } from "react-awesome-reveal";
+
 import {
   restaurantsData,
   dishesData,
@@ -15,11 +17,13 @@ import {
   text,
   chefData,
   aboutUsData,
+  aboutUsData,
 } from "../../data/constants";
 import {
   carouselDynamicStyles,
   containerChefDynamicStyles,
   containerRegDynamicStyles,
+} from "../../data/generalStyles";
 } from "../../data/generalStyles";
 
 function HomePage() {
