@@ -56,7 +56,11 @@ export const text = {
 export const iconButtonsData = [
   { icon: searchIcon, alt: "search-icon", className: "search-button" },
   { icon: personIcon, alt: "person-icon", className: "person-button" },
-  { icon: shoppingBagIcon, alt: "shopping-bag-icon", className: "shopping-bag-button" },
+  {
+    icon: shoppingBagIcon,
+    alt: "shopping-bag-icon",
+    className: "shopping-bag-button",
+  },
 ];
 
 const breakPoints = {
@@ -268,4 +272,9 @@ export const footerButtonsData = [
   { title: "Contact Us", alt: "contact-us" },
   { title: "Terms of Use", alt: "terms-of-use" },
   { title: "Privacy Policy", alt: "privacy-policy" },
+];
+
+export const hamburgerButtons = [
+  { title: "Restaurants", alt: "restaurants" },
+  { title: "Chefs", alt: "chefs" },
 ];
