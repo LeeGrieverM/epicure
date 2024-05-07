@@ -5,18 +5,24 @@ import Card from "../Card/Card";
 import { CardData } from "../../types/cardTypes";
 import { swiperBreakpoints } from "../../data/constants";
 import { Fade } from "react-awesome-reveal";
+import { useSelector } from "react-redux";
+import { RootState } from "../../state/store";
 
 const Carousel = ({
-  cards,
+  // cards,
   title,
   containerDynamicStyles,
   carouselDynamicStyles,
+  cardsType,
 }: {
-  cards: CardData[];
+  // cards: CardData[];
   title: string;
   containerDynamicStyles?: object;
   carouselDynamicStyles?: object;
+  cardsType: (state: RootState) => CardData[];
 }) => {
+  const cards = useSelector(cardsType);
+
   return (
     <Fade>
       <div className="carousel-container" style={containerDynamicStyles}>

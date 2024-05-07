@@ -7,10 +7,11 @@ import ChefOfTheWeek from "../../components/ChefOfTheWeek/ChefOfTheWeek";
 import AboutUs from "../../components/AboutUs/AboutUs";
 import Footer from "../../components/Footer/Footer";
 import { Fade } from "react-awesome-reveal";
+import { RootState } from "../../state/store";
 import {
-  restaurantsData,
-  dishesData,
-  chefRestaurantsData,
+  // restaurantsData,
+  // dishesData,
+  // chefRestaurantsData,
   text,
   chefData,
   aboutUsData,
@@ -21,25 +22,30 @@ import {
   containerRegDynamicStyles,
 } from "../../data/generalStyles";
 
+const restaurantsSelector = (state: RootState) => state.restaurants.value;
+const dishesSelector = (state: RootState) => state.dishes.value;
+const chefRestaurantsSelector = (state: RootState) => state.chefRestaurants.value;
+
 function HomePage() {
+ 
   return (
     <Fade>
       <div className="home-page-container">
         <Header />
         <SearchBar />
         <Carousel
-          cards={restaurantsData}
           title={text.popularRestaurantsTitle}
           containerDynamicStyles={containerRegDynamicStyles}
+          cardsType={restaurantsSelector}
         />
         <button className="all-restaurants-button">
           <span className="mobile-background-image" />
           <span className="desktop-background-image" />
         </button>
         <Carousel
-          cards={dishesData}
           title={text.signatureDishTitle}
           containerDynamicStyles={containerRegDynamicStyles}
+          cardsType={dishesSelector}
         />
         <button className="all-restaurants-button">
           <span className="mobile-background-image" />
@@ -52,10 +58,10 @@ function HomePage() {
           img={chefData.img}
         />
         <Carousel
-          cards={chefRestaurantsData}
           title={chefData.carouselTitle}
           containerDynamicStyles={containerChefDynamicStyles}
           carouselDynamicStyles={carouselDynamicStyles}
+          cardsType={chefRestaurantsSelector}
         />
         <AboutUs
           title={aboutUsData.title}
