@@ -18,9 +18,11 @@ const renderStars = (cardStars: number) => {
 const RestaurantCardExpansion = ({
   chef,
   stars,
+  dishes,
 }: {
   chef: string;
   stars: number;
+  dishes: string[];
 }) => {
   return (
     <div className="restaurant-chef-stars-container">

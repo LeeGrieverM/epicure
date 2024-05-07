@@ -1,8 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { CardData } from '../../types/cardTypes';
-import {
-  dishesData,
-} from "../../data/constants";
+import { CardData } from '../../types/types';
 import { RootState } from '../store';
 
 export interface DishesState {
@@ -10,7 +7,7 @@ export interface DishesState {
 }
 
 const initialState: DishesState = {
-  value: dishesData,
+  value: [],
 };
 
 const dishesSlice = createSlice({

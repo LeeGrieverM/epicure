@@ -6,8 +6,10 @@ import IconMeanings from "../../components/IconMeanings/IconMeanings";
 import ChefOfTheWeek from "../../components/ChefOfTheWeek/ChefOfTheWeek";
 import AboutUs from "../../components/AboutUs/AboutUs";
 import Footer from "../../components/Footer/Footer";
+import RestaurantCardExpansion from "../../components/ExpansionCards/RestaurantCardExpansion/RestaurantCardExpantion";
 import { Fade } from "react-awesome-reveal";
-import { RootState } from "../../state/store";
+import { CardData, IRestaurant } from "../../types/types";
+import { restaurantsSelector, fetchRestaurants } from "../../state/slices/restaurantsSlice";
 import {
   // restaurantsData,
   // dishesData,
@@ -21,13 +23,33 @@ import {
   containerChefDynamicStyles,
   containerRegDynamicStyles,
 } from "../../data/generalStyles";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { AppDispatch } from "../../state/store";
 
-const restaurantsSelector = (state: RootState) => state.restaurants.value;
-const dishesSelector = (state: RootState) => state.dishes.value;
-const chefRestaurantsSelector = (state: RootState) => state.chefRestaurants.value;
+const mapIRestaurantToCardData = (restaurant: IRestaurant): CardData => {
+  return {
+    title: restaurant.name,
+    image: restaurant.image,
+    expansionComponent: RestaurantCardExpansion({
+      chef: restaurant.chef,
+      dishes: restaurant.dishes,
+      stars: restaurant.stars,
+    }),
+  };
+};
+// const dishesSelector = (state: RootState) => state.dishes.value;
+// const chefRestaurantsSelector = (state: RootState) => state.chefRestaurants.value;
 
 function HomePage() {
- 
+  const dispatch = useDispatch<AppDispatch>();
+
+  const restaurants = useSelector(restaurantsSelector);
+
+  useEffect(() => {
+    dispatch(fetchRestaurants());
+  }, [dispatch]);
+
   return (
     <Fade>
       <div className="home-page-container">
@@ -36,7 +58,7 @@ function HomePage() {
         <Carousel
           title={text.popularRestaurantsTitle}
           containerDynamicStyles={containerRegDynamicStyles}
-          cardsType={restaurantsSelector}
+          cards={restaurants.map(mapIRestaurantToCardData)}
         />
         <button className="all-restaurants-button">
           <span className="mobile-background-image" />
@@ -45,7 +67,7 @@ function HomePage() {
         <Carousel
           title={text.signatureDishTitle}
           containerDynamicStyles={containerRegDynamicStyles}
-          cardsType={dishesSelector}
+          cards={restaurants.map(mapIRestaurantToCardData)}
         />
         <button className="all-restaurants-button">
           <span className="mobile-background-image" />
@@ -61,7 +83,7 @@ function HomePage() {
           title={chefData.carouselTitle}
           containerDynamicStyles={containerChefDynamicStyles}
           carouselDynamicStyles={carouselDynamicStyles}
-          cardsType={chefRestaurantsSelector}
+          cards={restaurants.map(mapIRestaurantToCardData)}
         />
         <AboutUs
           title={aboutUsData.title}
@@ -78,3 +100,4 @@ function HomePage() {
 }
 
 export default HomePage;
+

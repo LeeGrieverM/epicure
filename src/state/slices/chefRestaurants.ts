@@ -1,8 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { CardData } from '../../types/cardTypes';
-import {
-  chefRestaurantsData,
-} from "../../data/constants";
+import { CardData } from '../../types/types';
+
 import { RootState } from '../store';
 
 export interface ChefRestaurantState {
@@ -10,7 +8,7 @@ export interface ChefRestaurantState {
 }
 
 const initialState: ChefRestaurantState = {
-  value: chefRestaurantsData,
+  value: [],
 };
 
 const chefRestaurantSlice = createSlice({
