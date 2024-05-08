@@ -1,32 +1,40 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { CardData } from '../../types/types';
+import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import axios from 'axios';
+import { IDish } from '../../types/types';
 import { RootState } from '../store';
 
 export interface DishesState {
-    value: CardData[];
+    value: IDish[];
 }
 
 const initialState: DishesState = {
   value: [],
 };
 
+axios.defaults.baseURL = "http://localhost:3000/v1";
+
+export const fetchDishes = createAsyncThunk(
+  "dishes/fetchDishes",
+  async (): Promise<IDish[]> => {
+    const response = await axios.get<IDish[]>("/dishes");
+    return response.data;
+  }
+);
+
 const dishesSlice = createSlice({
   name: "dish",
   initialState,
-  reducers: {
-    addDish: (state, action: PayloadAction<CardData>) => {
-      state.value.push(action.payload);
-    },
-    deleteDish: (state, action: PayloadAction<string>) => {
-      state.value = state.value.filter(
-        (dish) => dish.title !== action.payload
-      );
-    },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(
+        fetchDishes.fulfilled,
+        (state, action: PayloadAction<IDish[]>) => {
+          state.value = action.payload;
+        }
+      )
   },
 });
-
-export const { addDish } = dishesSlice.actions;
-export const { deleteDish } = dishesSlice.actions;
 
 export const dishesSelector = (state: RootState) => state.dishes.value;
 

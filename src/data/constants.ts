@@ -18,7 +18,7 @@ import veganIcon from "../assets/icons/veganIcon.svg";
 // import LuminaImg from "../assets/images/Lumina.png";
 // import TigerLillyImg from "../assets/images/tiger-lily.png";
 
-// import { CardData } from "../types/types";
+import { CardData } from "../types/types";
 // import RestaurantCardExpantion from "../components/ExpansionCards/RestaurantCardExpansion/RestaurantCardExpantion";
 // import DishCardExpansion from "../components/ExpansionCards/DishCardExpansion/DishCardExpansion";
 
@@ -27,10 +27,10 @@ import veganIcon from "../assets/icons/veganIcon.svg";
 // import GarbanzoFritoImg from "../assets/images/garbanzoFrito.png";
 // import smokedPizzaImg from "../assets/images/smokedPizza.png";
 
-// // chef restaurants images
-// import onzaImg from "../assets/images/onza.png";
-// import kitchenMarketImg from "../assets/images/kitchenMarket.png";
-// import mashyaImg from "../assets/images/mashya.png";
+// chef restaurants images
+import onzaImg from "../assets/images/onza.png";
+import kitchenMarketImg from "../assets/images/kitchenMarket.png";
+import mashyaImg from "../assets/images/mashya.png";
 
 // chef image
 import chefImg from "../assets/images/yossiShitrit.png";
@@ -224,32 +224,32 @@ export const iconsMeaningData = [
 //   },
 // ];
 
-// export const chefRestaurantsData: CardData[] = [
-//   {
-//     title: "Onza",
-//     img: onzaImg,
-//   },
-//   {
-//     title: "Kitchen Market",
-//     img: kitchenMarketImg,
-//   },
-//   {
-//     title: "Mashya",
-//     img: mashyaImg,
-//   },
-//   {
-//     title: "Mashya",
-//     img: mashyaImg,
-//   },
-//   {
-//     title: "Mashya",
-//     img: mashyaImg,
-//   },
-//   {
-//     title: "Mashya",
-//     img: mashyaImg,
-//   },
-// ];
+export const chefRestaurantsData: CardData[] = [
+  {
+    title: "Onza",
+    image: onzaImg,
+  },
+  {
+    title: "Kitchen Market",
+    image: kitchenMarketImg,
+  },
+  {
+    title: "Mashya",
+    image: mashyaImg,
+  },
+  {
+    title: "Mashya",
+    image: mashyaImg,
+  },
+  {
+    title: "Mashya",
+    image: mashyaImg,
+  },
+  {
+    title: "Mashya",
+    image: mashyaImg,
+  },
+];
 
 export const chefData = {
   title: "CHEF OF THE MONTH: ",

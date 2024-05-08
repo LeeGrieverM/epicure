@@ -7,14 +7,13 @@ import ChefOfTheWeek from "../../components/ChefOfTheWeek/ChefOfTheWeek";
 import AboutUs from "../../components/AboutUs/AboutUs";
 import Footer from "../../components/Footer/Footer";
 import RestaurantCardExpansion from "../../components/ExpansionCards/RestaurantCardExpansion/RestaurantCardExpantion";
+import DishCardExpansion from "../../components/ExpansionCards/DishCardExpansion/DishCardExpansion";
 import { Fade } from "react-awesome-reveal";
-import { CardData, IRestaurant } from "../../types/types";
+import { CardData, IDish, IRestaurant } from "../../types/types";
 import { restaurantsSelector, fetchRestaurants } from "../../state/slices/restaurantsSlice";
 import {
-  // restaurantsData,
-  // dishesData,
-  // chefRestaurantsData,
   text,
+  chefRestaurantsData,
   chefData,
   aboutUsData,
 } from "../../data/constants";
@@ -26,28 +25,42 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { AppDispatch } from "../../state/store";
+import { dishesSelector, fetchDishes } from "../../state/slices/dishesSlice";
 
 const mapIRestaurantToCardData = (restaurant: IRestaurant): CardData => {
   return {
     title: restaurant.name,
     image: restaurant.image,
-    expansionComponent: RestaurantCardExpansion({
-      chef: restaurant.chef,
-      dishes: restaurant.dishes,
-      stars: restaurant.stars,
-    }),
+    expansionComponent: <RestaurantCardExpansion
+      chef={restaurant.chef.name}
+      stars= {restaurant.stars}
+      dishes={restaurant.dishes.map(dish => dish.name)}
+    />,
   };
 };
-// const dishesSelector = (state: RootState) => state.dishes.value;
-// const chefRestaurantsSelector = (state: RootState) => state.chefRestaurants.value;
+
+const mapIDishToCardData = (dish: IDish): CardData => {
+  return {
+    title: dish.name,
+    image: dish.image,
+    expansionComponent: <DishCardExpansion
+      icon={dish.icon}
+      ingredients= {dish.ingredients}
+      price={dish.price} 
+    />,
+  };
+};
 
 function HomePage() {
   const dispatch = useDispatch<AppDispatch>();
 
   const restaurants = useSelector(restaurantsSelector);
+  const dishes = useSelector(dishesSelector);
 
   useEffect(() => {
     dispatch(fetchRestaurants());
+    dispatch(fetchDishes());
+
   }, [dispatch]);
 
   return (
@@ -67,7 +80,7 @@ function HomePage() {
         <Carousel
           title={text.signatureDishTitle}
           containerDynamicStyles={containerRegDynamicStyles}
-          cards={restaurants.map(mapIRestaurantToCardData)}
+          cards={dishes.map(mapIDishToCardData)}
         />
         <button className="all-restaurants-button">
           <span className="mobile-background-image" />
@@ -83,7 +96,7 @@ function HomePage() {
           title={chefData.carouselTitle}
           containerDynamicStyles={containerChefDynamicStyles}
           carouselDynamicStyles={carouselDynamicStyles}
-          cards={restaurants.map(mapIRestaurantToCardData)}
+          cards={chefRestaurantsData}
         />
         <AboutUs
           title={aboutUsData.title}

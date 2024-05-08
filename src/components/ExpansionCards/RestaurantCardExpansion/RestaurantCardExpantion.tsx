@@ -24,6 +24,8 @@ const RestaurantCardExpansion = ({
   stars: number;
   dishes: string[];
 }) => {
+  console.log("Props received by RestaurantCardExpansion:", { chef, stars, dishes }); // Add this log
+
   return (
     <div className="restaurant-chef-stars-container">
       <p className="chef-name">{chef}</p>

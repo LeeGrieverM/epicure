@@ -39,13 +39,6 @@ const restaurantsSlice = createSlice({
 });
 
 export const restaurantsSelector = (state: RootState) =>
-  state.restaurants.value.map((restaurant) => ({
-    id: restaurant.id,
-    name: restaurant.name,
-    image: restaurant.image,
-    chef: restaurant.chef,
-    stars: restaurant.stars,
-    dishes: restaurant.dishes,
-  }));
+  state.restaurants.value;
 
 export default restaurantsSlice.reducer;
